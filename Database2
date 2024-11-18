@@ -1,0 +1,28 @@
+-- Step 1: Create the database
+CREATE DATABASE HerbalMedicines;
+
+-- Step 2: Use the database
+USE HerbalMedicines;
+
+-- Step 3: Create the Medicines table
+CREATE TABLE Medicines (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plantname VARCHAR(50),
+    botanicalname VARCHAR(100),
+    dosage VARCHAR(100),
+    noofuses INT,
+    parts VARCHAR(50),
+    therapeuticuses JSON
+);
+
+-- Step 4: Insert data into the table
+INSERT INTO Medicines (plantname, botanicalname, dosage, noofuses, parts, therapeuticuses)
+VALUES
+('amukkara', 'Withania somnifera', 'Powder 3-6 g', 7, 'Root', 
+    '["pain", "fever", "eczema", "anemia", "general debility", "rheumatic ailments", "oligozoospermia"]'),
+('athi', 'Ficus racemosa', 'Decoction 30-50 ml twice daily, powder 3-6g', 4, 'bark', 
+    '["dysentery", "piles", "bleeding disorder", "leucorrhea"]'),
+('athimathuram', 'Glycyrrhiza glabra', 'powder 2-4g', 8, 'stolon and root', 
+    '["burning micturition", "bone disorders", "cough", "jaundice", "eye diseases", "polydypsia", "peptic ulcer", "vitiligo"]'),
+('vilvam', 'Aegle marmelo', 'Decoction 30-50 ml twice daily', 3, 'Root', 
+    '["fainting", "fever", "body pain"]');
